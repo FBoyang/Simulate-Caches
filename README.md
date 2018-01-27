@@ -1,0 +1,5 @@
+# Simulate-Caches
+Introduction of the cache design:
+I use hash table as the main data structure to simulate the structure of the cache. Inside of each entry, I design a Queue structure to represent each set in the cache. The reason why using Queue is to satisfy the first-in-first-out writing policy. Inside of the Queue, I have two nodes, one is called front, which always points to the front; the other is rear, which always points to the last one of the linked list.
+Cache A definitely has a better performance than Cache B in terms of hit ratio. The reason is that the effective address in the files are not always 48 bites. Therefore, “0” always takes up the left most value in the address. In Cache B, set number is defined by the left most value, therefore all the data are put into the same set index, as a result, Cache B keeps using the same set but let all the other set empty, causing a lower performance. On the contrary, in Cache A, set number is defined by the middle value of the address, therefore the set number may various and therefore more efficiently use all the set.
+Boyang Fu
